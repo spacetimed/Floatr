@@ -3,13 +3,7 @@ A lightweight **TypeScript/HTML5/JS** library to create animated, floating parti
 
 This library utilizes **HTML 5** canvas elements to make animations as efficient as possible. Different frame rates are accounted for by the library.
 
-
-<br>
-
 ----------
-
-<br>
-
 ## Demo
 
 ![Demo Image](/images/demo.png)
@@ -19,12 +13,7 @@ This library utilizes **HTML 5** canvas elements to make animations as efficient
 https://ffffff-base16.github.io/Floatr/
 
 
-<br>
-
 ----------
-
-<br>
-
 ## Install
 Installing the Floatr library onto a website is made quite simple. Although TypeScript is used for the development of this library, it is not necessary for using this library. Instead, only vanilla JavaScript is required, along with HTML.
 
@@ -64,15 +53,8 @@ particles.Render();
 \
 And that's it! A full list of all the settings Floatr offers can be found below.
 
-<br>
-
 ----------
-
-<br>
-
 ## Settings
-
-<br>
 
 name | values | description
 -----|-----------------|------------
