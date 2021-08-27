@@ -1,7 +1,8 @@
 # Floatr
-A lightweight **TypeScript/HTML5/JS** library to create animated, floating particles inside an HTML element. 
+A lightweight **TypeScript/HTML5/JS** library to create animated, floating particles inside of an HTML element. 
 
 This library utilizes **HTML5** canvas elements to make animations as efficient as possible. Different frame rates are accounted for by the library. 
+
 
 ----------
 ## Demo
@@ -11,13 +12,13 @@ This library utilizes **HTML5** canvas elements to make animations as efficient 
 **View a dynamic demo of Floatr through GitHub Pages:**
 **https://ffffff-base16.github.io/Floatr/**
 
-Note that as of August 2021, Floatr has only been tested in _**Google Chrome,  Version 92.0.4515.159**_. 
+Note that as of yet, compatibility has only been tested in **Google Chrome**. Animations may behave differently in other web browsers.
 
-Multi-browser compatibility is not a priority at the moment, as the library is still under initial development.
+
 
 ----------
 ## Install
-Installing the Floatr library onto a website is made quite simple. Although TypeScript is used for the source of this library, only the vanilla JavaScript file `(lib.js)` is required to run this library on a website, along with an HTML file of course.
+Installing the Floatr library onto a website is made quite simple. Although TypeScript is used for the source of this library, only the vanilla *JavaScript* file `(lib.js)` is required to run this library on a website, along with, of course, an *HTML* file.
 
 \
 **1. Include the lib.js library in your HTML code:**
@@ -28,23 +29,23 @@ Installing the Floatr library onto a website is made quite simple. Although Type
 \
 **2. Add a div element to contain your particles:**
 ```html
-<div id="demo-particleSpace" height="500" width="500"></div>
+<div id="demo-particleSpace" style="width:500px; height:500px; "></div>
 ```
 
 \
 **3. Initiate the element as a Floatr container with the following JavaScript code:**
 ```js
-var floatrSettings = { 
+const floatrSettings = { 
     'width' : 'inherit',
     'height' : 'inherit',
     'count' : 60,
     'gravity' : 0.050,
     'speed' : 0.08,
     'maxSize' : 1,
-    'variance' : 50,
+    'variance' : 50
 }
 
-//Floatr is passed the ID of a div, in this case 'demo-particleSpace'.
+//Floatr is passed the ID of the div, in this case 'demo-particleSpace'.
 const particles = new Floatr('demo-particleSpace', floatrSettings);
 particles.Render();
 ```
@@ -66,3 +67,12 @@ name | values | description
 `variance` | number(1-100) | The variance (in other words, randomness) of each particle. The lower the value, the more synchronous each particle moves.<br>**Recommended Value: `50`**
 
 A full demonstration of all possible settings can be tested by visiting the demo, linked above.
+
+----------
+## Browser Compatibility
+
+As of **August 2021**, Floatr has only been tested in _**Google Chrome,  Version 92.0.4515.159**_. 
+
+Multi-browser compatibility is not a priority at the moment, as the library is still under initial development.
+
+Library code may need to be modified in order to suit other browsers.
