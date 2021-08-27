@@ -12,7 +12,7 @@ This library utilizes **HTML 5** canvas elements to make animations as efficient
 
 ## Demo
 
-![Demo Image](images/demo.png)
+![Demo Image](/images/demo.png)
 
 **View a dynamic demo of Floatr through GitHub Pages:**
 
