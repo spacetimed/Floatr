@@ -1,7 +1,7 @@
 body {
     color:#fff;
     font-family:'Archivo';
-    background-color:rgb(44, 44, 49);
+    background-color: rgb(37 37 64);
     height:100%;
     width:100%;
     margin:0;
@@ -121,4 +121,68 @@ body {
     top:0;
     left:0;
     z-index:-10;
+    filter:blur(0.8px);
+}
+
+.demo-controller {
+    position:absolute;
+    right:20px;
+    top:20px;
+    width:300px;
+    border-radius:10px;
+    background-color:rgba(0,0,0,0.2);
+    z-index:10;
+    animation:0.5s fadeIn 0s linear;
+    animation-fill-mode:forwards;
+}
+
+.demo-controller > h1 {
+    padding:0;
+    margin:20px;
+    font-size:22px;
+    padding-bottom:10px;
+    border-bottom:2px solid #fff;
+}
+
+.demo-controller > h3 {
+    font-size:12px;
+    padding:0;
+    position:relative;
+    margin-left:20px;
+    text-transform:uppercase;
+    display:inline;
+}
+
+.demo-controller > h4 {
+    color:rgb(255, 255, 255);
+    display:inline;
+    position:absolute;
+    right:20px;
+    margin-top:0px;
+    font-weight:300;
+}
+
+.demo-controller > input {
+    position: relative;
+    display: block;
+    margin : 0 auto;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 5px;
+    background: rgba(255,255,255,0.5); 
+    border-radius:100px;
+    outline: none; 
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+.demo-moon {
+    height:100px;;
+    position:absolute;
+    bottom:0;
+    width:100%;
 }

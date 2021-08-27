@@ -8,11 +8,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;700&display=swap" rel="stylesheet">
 
         <script type="text/javascript" src="Floatr/lib.js"></script>
+        <script type="text/javascript" src="Floatr/demo.js"></script>
 
     </head>
     <body>
-        <div class="demo-fadeIn"></div>
         <div id="demo-particleSpace"></div>
+        <div class="demo-controller">
+            <h1>Demo Controller</h1>
+            <h3>Count</h3>  <h4 id="demo_CountVal">60</h4>  <input id="demo_Count" type="range" min="1" max="100" value="60">
+            <h3>Gravity</h3>    <h4 id="demo_GravityVal">0.05</h4>  <input id="demo_Gravity"  type="range" min="1" max="100" value="50">
+            <h3>Speed</h3>  <h4 id="demo_SpeedVal">0.08</h4>  <input id="demo_Speed"  type="range" min="1" max="100" value="80">
+        </div>
         <div class="demo-content">
             <h1>Floatr <span class="floatr-logo"></span></h1>
             <p>This is a demo page showcasing the <b>Floatr</b> library. Create randomly placed particles to compliment backgrounds, add flare to a page, and much more.</p>
@@ -22,19 +28,20 @@
                 <img src="images/github.png" height="15"/>
             </div>
         </div>
+        <div class="demo-moon"></div>
     </body>
 
     <script type="text/javascript">
-        //Client import space
-        
-        const floatrSettings = {
+
+        var floatrSettings = {
             'width' : 'inherit',
             'height' : 'inherit',
-            'count' : 30,
+            'count' : 60,
+            'gravity' : 0.050,
+            'speed' : 0.08,
         }
 
         const particles = new Floatr('demo-particleSpace', floatrSettings);
-        
         particles.Render();
 
     </script>
