@@ -1,3 +1,12 @@
+/*
+
+    Floatr
+        A JavaScript/TypeScript library to create random, floating particles.
+
+    Author/URL: https://github.com/FFFFFF-base16/Floatr
+    Year: 2021
+
+*/
 class Floatr {
     constructor(container, settings) {
         this.spawned = false;
@@ -29,12 +38,12 @@ class Floatr {
         this.logger('canvas element created');
     }
     Render() {
+        this.logger('rendering particles');
         this.__animationLoop();
     }
     updateSettings(settings) {
         this.settings = settings;
         this.spawned = false;
-        console.table(this.settings);
     }
     rand(min, max) {
         min = Math.ceil(min);

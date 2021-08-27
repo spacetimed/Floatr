@@ -3,6 +3,8 @@
     The purpose of this file is to supply a dynamic demonstration of Floatr.
 */
 
+var _DEMO = new Object();
+
 window.addEventListener('DOMContentLoaded', () => {
     const input_Count = document.getElementById('demo_Count');
     const input_Gravity = document.getElementById('demo_Gravity');
@@ -16,51 +18,49 @@ window.addEventListener('DOMContentLoaded', () => {
     var val_Size = document.getElementById('demo_SizeVal');
     var val_Variance = document.getElementById('demo_VarianceVal');
 
-    __GLOBAL.COUNT = Number(input_Count.value);
-    __GLOBAL.GRAVITY = Number(input_Gravity.value / 1000);
-    __GLOBAL.SPEED = Number(input_Speed.value / 1000);
-    __GLOBAL.SIZE = Number(input_Size.value);
+    _DEMO.COUNT = Number(input_Count.value);
+    _DEMO.GRAVITY = Number(input_Gravity.value / 1000);
+    _DEMO.SPEED = Number(input_Speed.value / 1000);
+    _DEMO.SIZE = Number(input_Size.value);
+    _DEMO.VARIANCE = Number(input_Variance.value);
 
     input_Count.addEventListener('input', (e) => {
-        __GLOBAL.COUNT = Number(input_Count.value);
-        val_Count.innerText = __GLOBAL.COUNT;
+        _DEMO.COUNT = Number(input_Count.value);
+        val_Count.innerText = _DEMO.COUNT;
         updateFloatrDemo();
     });
 
     input_Gravity.addEventListener('input', (e) => {
-        __GLOBAL.GRAVITY = Number(input_Gravity.value / 1000);
-        val_Gravity.innerText = __GLOBAL.GRAVITY;
+        _DEMO.GRAVITY = Number(input_Gravity.value / 1000);
+        val_Gravity.innerText = _DEMO.GRAVITY;
         updateFloatrDemo();
     });
 
     input_Speed.addEventListener('input', (e) => {
-        __GLOBAL.SPEED = Number(input_Speed.value / 1000);
-        val_Speed.innerText = __GLOBAL.SPEED;
+        _DEMO.SPEED = Number(input_Speed.value / 1000);
+        val_Speed.innerText = _DEMO.SPEED;
         updateFloatrDemo();
     });
 
     input_Size.addEventListener('input', (e) => {
-        __GLOBAL.SIZE = Number(input_Size.value);
-        val_Size.innerText = __GLOBAL.SIZE;
+        _DEMO.SIZE = Number(input_Size.value);
+        val_Size.innerText = _DEMO.SIZE;
         updateFloatrDemo();
     });
 
     input_Variance.addEventListener('input', (e) => {
-        __GLOBAL.VARIANCE = Number(input_Variance.value);
-        val_Variance.innerText = __GLOBAL.VARIANCE;
+        _DEMO.VARIANCE = Number(input_Variance.value);
+        val_Variance.innerText = _DEMO.VARIANCE;
         updateFloatrDemo();
     });
 
 });
 
-var __GLOBAL = new Object();
-
 function updateFloatrDemo() {
-    floatrSettings['count'] = __GLOBAL.COUNT;
-    floatrSettings['gravity'] = __GLOBAL.GRAVITY;
-    floatrSettings['speed'] = __GLOBAL.SPEED;
-    floatrSettings['maxSize'] = __GLOBAL.SIZE;
-    floatrSettings['variance'] = __GLOBAL.VARIANCE;
-    
+    floatrSettings['count'] = _DEMO.COUNT;
+    floatrSettings['gravity'] = _DEMO.GRAVITY;
+    floatrSettings['speed'] = _DEMO.SPEED;
+    floatrSettings['maxSize'] = _DEMO.SIZE;
+    floatrSettings['variance'] = _DEMO.VARIANCE;
     particles.updateSettings(floatrSettings);
 }
