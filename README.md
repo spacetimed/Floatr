@@ -1,7 +1,7 @@
 # Floatr
-A lightweight **TypeScript/HTML5/JS** library to create animated, floating particles. 
+A lightweight **TypeScript/HTML5/JS** library to create animated, floating particles inside an HTML element. 
 
-This library utilizes **HTML 5** canvas elements to make animations as efficient as possible. Different frame rates are accounted for by the library.
+This library utilizes **HTML5** canvas elements to make animations as efficient as possible. Different frame rates are accounted for by the library. 
 
 ----------
 ## Demo
@@ -9,25 +9,24 @@ This library utilizes **HTML 5** canvas elements to make animations as efficient
 ![Demo Image](/images/demo.png)
 
 **View a dynamic demo of Floatr through GitHub Pages:**
+**https://ffffff-base16.github.io/Floatr/**
 
-https://ffffff-base16.github.io/Floatr/
+Note that as of August 2021, Floatr has only been tested in _**Google Chrome,  Version 92.0.4515.159**_. 
 
+Multi-browser compatibility is not a priority at the moment, as the library is still under initial development.
 
 ----------
 ## Install
-Installing the Floatr library onto a website is made quite simple. Although TypeScript is used for the development of this library, it is not necessary for using this library. Instead, only vanilla JavaScript is required, along with HTML.
-
+Installing the Floatr library onto a website is made quite simple. Although TypeScript is used for the source of this library, only the vanilla JavaScript file `(lib.js)` is required to run this library on a website, along with an HTML file of course.
 
 \
 **1. Include the lib.js library in your HTML code:**
-
 ```html
 <script type="text/javascript" src="Floatr/lib.js"></script>
 ```
 
 \
 **2. Add a div element to contain your particles:**
-
 ```html
 <div id="demo-particleSpace" height="500" width="500"></div>
 ```
@@ -45,8 +44,8 @@ var floatrSettings = {
     'variance' : 50,
 }
 
+//Floatr is passed the ID of a div, in this case 'demo-particleSpace'.
 const particles = new Floatr('demo-particleSpace', floatrSettings);
-
 particles.Render();
 ```
 
