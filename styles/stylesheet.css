@@ -181,8 +181,49 @@ body {
 }
 
 .demo-moon {
-    height:100px;;
     position:absolute;
     bottom:0;
+    height:100%;
     width:100%;
+    z-index:-20;
+    overflow:hidden;
+    animation:fadeIn 0.8s;
+}
+
+.ring1, .ring2, .ring3, .ring4, .ring5, .ring6 {
+    width:500px;
+    height:150px;
+    border-radius:100%;
+    margin:0 auto;
+    position:absolute;
+    bottom:400px;
+    right:400px;
+    border:1px solid rgba(255, 255, 255, 0.1);
+    transform:rotate(-20deg);
+}
+
+.ring2 {
+    transform:scale(140%) rotate(-20deg);
+    opacity:0.6;
+}
+
+.ring3 {
+    transform:scale(200%) rotate(-20deg);
+    opacity:0.4;
+}
+
+.ring4 {
+    transform:scale(250%) rotate(-20deg);
+    opacity:0.2;
+}
+
+.ring5 {
+    transform:scale(300%) rotate(-20deg);
+    opacity:0.2;
+}
+
+.ring6 {
+    transform:scale(400%) rotate(-20deg);
+    opacity:0.1;
+    filter:blur(0.5px);
 }

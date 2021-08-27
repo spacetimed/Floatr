@@ -4,6 +4,8 @@ interface FloatrSettings {
     count: number;
     gravity: number;
     speed: number;
+    maxSize: number;
+    variance: number;
 }
 
 interface FloatrParticle {
@@ -92,12 +94,11 @@ class Floatr {
                 this.__singleParticle = {
                     'x' : this.rand(0, this.width),
                     'y' :  this.rand(-1 * (this.height * .6), this.height),
-                    'variance' : this.rand(50, 100),
-                    'size' : (Math.random() * 100) % 1 + 1
+                    'variance' : this.rand((100 - this.settings.variance), 100),
+                    'size' : (Math.random() * 100) % this.settings.maxSize + 1
                 }
                 this.particles[i] = this.__singleParticle;
             }
-            //console.table(this.particles);
             this.__g =  this.settings.gravity;
             this.spawned = true;
         }

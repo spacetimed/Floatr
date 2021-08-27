@@ -18,17 +18,26 @@
             <h3>Count</h3>  <h4 id="demo_CountVal">60</h4>  <input id="demo_Count" type="range" min="1" max="100" value="60">
             <h3>Gravity</h3>    <h4 id="demo_GravityVal">0.05</h4>  <input id="demo_Gravity"  type="range" min="1" max="100" value="50">
             <h3>Speed</h3>  <h4 id="demo_SpeedVal">0.08</h4>  <input id="demo_Speed"  type="range" min="1" max="100" value="80">
+            <h3>Max Size</h3>  <h4 id="demo_SizeVal">1</h4>  <input id="demo_Size"  type="range" min="1" max="10" value="1">
+            <h3>Variance</h3>  <h4 id="demo_VarianceVal">50</h4>  <input id="demo_Variance"  type="range" min="1" max="100" value="50">
         </div>
         <div class="demo-content">
             <h1>Floatr <span class="floatr-logo"></span></h1>
             <p>This is a demo page showcasing the <b>Floatr</b> library. Create randomly placed particles to compliment backgrounds, add flare to a page, and much more.</p>
             <div class="credits">
                 <span class="code">&#60; &#47; &#62;</span>
-                <a href="#">FFFFFF-base16</a>
+                <a href="https://github.com/FFFFFF-base16/Floatr">FFFFFF-base16</a>
                 <img src="images/github.png" height="15"/>
             </div>
         </div>
-        <div class="demo-moon"></div>
+        <div class="demo-moon">
+            <div class="ring1"></div>
+            <div class="ring2"></div>
+            <div class="ring3"></div>
+            <div class="ring4"></div>
+            <div class="ring5"></div>
+            <div class="ring6"></div>
+        </div>
     </body>
 
     <script type="text/javascript">
@@ -39,6 +48,8 @@
             'count' : 60,
             'gravity' : 0.050,
             'speed' : 0.08,
+            'maxSize' : 1,
+            'variance' : 50,
         }
 
         const particles = new Floatr('demo-particleSpace', floatrSettings);
