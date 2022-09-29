@@ -10,7 +10,7 @@ This library utilizes **HTML5** canvas elements to make animations as efficient 
 ![Demo Image](/images/demo.png)
 
 **View a dynamic demo of Floatr through GitHub Pages:**
-**https://ffffff-base16.github.io/Floatr/**
+**https://spacetimed.github.io/Floatr/**
 
 Note that as of yet, compatibility has only been tested in **Google Chrome**. Animations may behave differently in other web browsers.
 
